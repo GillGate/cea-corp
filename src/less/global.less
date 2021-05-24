@@ -1,0 +1,116 @@
+.reset();
+
+.container {
+	.wrapper();
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans";
+	color: @black;
+	padding-bottom: 600px;
+}
+
+a {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	color: @black;
+}
+
+.caption {
+	font-size: 16px;
+	line-height: 21px;
+}
+
+.text {
+	font-size: 22px;
+	line-height: 29px;
+}
+
+.text--big {
+	font-size: 32px;
+	line-height: 43px;
+}
+
+.text--bl {
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 63px;
+		height: 2px;
+		display: block;
+		background: @red;
+		margin-top: 23px;
+	}
+}
+
+.link--arrow {
+	font-size: 22px;
+	line-height: 30px;
+	color: @blue;
+	font-weight: 400;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&::after {
+		content: '';
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		background: url(../img/arrow-link-blue.svg) no-repeat center / contain;
+		margin-left: 14px;
+	}
+}
+
+.link--arrowWhite {
+	&::after {
+		background: url(../img/arrow-link-white.svg) no-repeat center / contain;
+	}
+}
+
+.link--arrowFW {
+	justify-content: space-between;
+
+	&::after {
+		right: 0;
+	}
+}
+
+.title {
+	color: @black;
+}
+
+.title--blue {
+	color: @blue;
+}
+
+.title--big {
+	font-size: 48px;
+	line-height: 65px;
+}
+
+.title--medium {
+	font-size: 42px;
+	line-height: 57px;
+}
+
+.title--small {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+.vh {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}

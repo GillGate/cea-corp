@@ -1,0 +1,102 @@
+.fields {
+
+	padding: 225px 0;
+
+	&__list {
+		.row-flex();
+	}
+
+	&__item {
+		.col();
+		.size(4);
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		padding: 50px;
+		height: 374px;
+		box-sizing: border-box;
+		background: @light-grey url(../img/field-bg.jpg) center / cover;
+		transition: background .6s ease;
+
+		&:hover {
+			cursor: pointer;
+			background-repeat: no-repeat;
+			justify-content: start;
+
+			.fields__title {
+				color: @white;
+				font-size: 26px;
+				line-height: 35px;
+				padding-right: 40px;
+				margin-bottom: 15px;
+			}
+
+			.fields__text {
+				display: block;
+				opacity: 1;
+			}
+
+			.fields__img {
+				display: none;
+			}
+		}
+
+		&--title {
+			padding: 0;
+			background: none;
+
+			&:hover {
+				cursor: default;
+			}
+		}
+
+		&--industry {
+			&:hover {
+				background-image: url(../img/field-industry.jpg);
+			}
+		}
+
+		&--textile {
+			&:hover {
+				background-image: url(../img/field-textile.jpg);
+			}
+		}
+
+		&--retail {
+			&:hover {
+				background-image: url(../img/field-retail.jpg);
+			}
+		}
+
+		&--hotels {
+			&:hover {
+				background-image: url(../img/field-hotels.jpg);
+			}
+		}
+
+		&--travel {
+			&:hover {
+				background-image: url(../img/field-travel.jpg);
+			}
+		}
+	}
+
+	&__mainTitle {
+		text-transform: none;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 43px;
+		transition: color .6s ease;
+	}
+
+	&__text {
+		display: none;
+		color: @white;
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

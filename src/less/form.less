@@ -1,0 +1,80 @@
+.form {
+	&__label {
+		display: block;
+		width: 100%;
+		max-width: 700px;
+	}
+
+	&__input {
+		width: inherit;
+		padding: 12px 20px;
+		margin-bottom: 16px;
+		box-sizing: border-box;
+		color: inherit;
+		background-color: inherit;
+		border: none;
+		border-bottom: 1px solid @white;
+
+		&::placeholder {
+			color: inherit;
+		}
+	}
+
+	&__foot {
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__agree {
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+
+		span {
+			color: @red;
+		}
+	}
+
+	&__agreeLabel {
+		padding-left: 40px;
+		position: relative;
+
+		&::before, &::after {
+			content: '';
+			display: inline-block;
+			border-radius: 4px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&::before {
+			width: 20px;
+			height: 20px;
+			border: 1px solid @white;
+		}
+	}
+
+	#form_agree:checked + .form__agreeLabel {
+		&::before {
+			background: @white;
+		}
+
+		&::after {
+			width: 14px;
+			height: 10px;
+			top: 6px;
+			left: 4px;
+			background: url(../img/agree-blue.svg) no-repeat center / contain;
+		}
+	}
+
+	&__btn {
+		background: none;
+		border: none;
+		color: inherit;
+		cursor: pointer;
+	}
+}
