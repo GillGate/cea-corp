@@ -77,4 +77,16 @@
 		color: inherit;
 		cursor: pointer;
 	}
+
+	&--white {
+		.form__input {
+			border-color: @grey;
+		}
+
+		.form__agreeLabel {
+			&::before {
+				border-color: @blue;
+			}
+		}
+	}
 }
