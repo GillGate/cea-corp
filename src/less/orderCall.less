@@ -1,7 +1,7 @@
 .orderCall {
 	padding-bottom: 200px;
 
-	.container {
+	&__wrapper {
 		display: flex;
 	}
 
@@ -12,5 +12,19 @@
 	&__formWrapper {
 		width: 100%;
 		max-width: 620px;
+	}
+
+	&--contacts {
+		.orderCall__wrapper {
+			padding: 0 60px;
+		}
+
+		.orderCall__title {
+			margin-right: 0;
+		}
+
+		.orderCall__formWrapper {
+			margin-top: 150px;
+		}
 	}
 }

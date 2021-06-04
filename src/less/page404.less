@@ -1,0 +1,32 @@
+.page404 {
+	background: @grey url(../img/404-bg.jpg) no-repeat center bottom / cover;
+	
+	&__wrapper {
+		padding: 280px 0;
+		margin: 0 auto;
+		max-width: 660px;
+		color: @white;
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		font-size: 18px;
+
+		p {
+			max-width: 450px;
+		}
+
+		a {
+			min-width: 130px;
+			color: inherit;
+			font-size: inherit;
+		}
+	}
+}

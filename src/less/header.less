@@ -14,20 +14,35 @@
 	}
 
 	&__link {
+
+		&::before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 14px;
+			height: 14px;
+			margin-right: 8px;
+			background: none no-repeat center / contain;
+		}
+
 		&--active {
 			color: @red;
 		}
 
 		&--phone {
-			display: inline-block;
+			display: block;
+			margin-bottom: 4px;
+			
 			&::before {
-				content: '';
-				display: inline-block;
-				vertical-align: middle;
-				width: 14px;
-				height: 14px;
-				margin-right: 8px;
-				background: url(../img/header-phone.svg) no-repeat / contain;
+				background-image: url(../img/header-phone.svg);
+			}
+		}
+
+		&--fax {
+			display: block;
+
+			&::before {
+				background-image: url(../img/header-fax.svg);
 			}
 		}
 	}
