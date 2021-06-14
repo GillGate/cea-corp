@@ -6,6 +6,10 @@
 		margin: 0 auto;
 		max-width: 660px;
 		color: @white;
+
+		.sm-block({
+			padding: 200px 0;
+		});
 	}
 
 	&__title {
@@ -19,6 +23,11 @@
 		align-items: flex-end;
 		font-size: 18px;
 
+		.sm-block({
+			flex-wrap: wrap;
+			font-size: 16px;
+		});
+
 		p {
 			max-width: 450px;
 		}
@@ -27,6 +36,11 @@
 			min-width: 130px;
 			color: inherit;
 			font-size: inherit;
+
+			.sm-block({
+				margin-top: 14px;
+				margin-left: auto;
+			});
 		}
 	}
 }

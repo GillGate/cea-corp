@@ -10,6 +10,17 @@
 
 	&__title {
 		font-weight: 600;
+
+		.sm-block({
+			font-size: 42px;
+			line-height: 57px;
+		});
+	}
+
+	&__text {
+		.sm-block({
+			display: none;
+		});
 	}
 
 	&__info {
@@ -21,6 +32,11 @@
 		a {
 			color: inherit;
 			font-size: inherit;
+
+			.sm-block({
+				font-weight: 400;
+				margin-left: auto;
+			});
 		}
 	}
 }

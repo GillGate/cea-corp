@@ -3,6 +3,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		.md-block({
+			align-items: flex-start;
+		});
 	}
 
 	&__info {
@@ -15,6 +19,15 @@
 
 	&__controls {
 		margin-left: 64px;
+
+		.md-block({
+			margin-top: 20px;
+			min-width: 160px;
+		});
+
+		.sm-block({
+			display: none;
+		});
 	}
 
 	&__btn {
@@ -46,8 +59,22 @@
 		max-width: 786px;
 		margin: 180px auto;
 
+		.md-block({
+			margin: 120px auto 90px;
+		});
+
+		.sm-block({
+			margin: 80px auto 20px;
+			font-size: 16px;
+			line-height: 22px;
+		});
+
 		&::after {
 			margin: 30px auto;
+
+			.sm-block({
+				margin: 20px auto;
+			});
 		}
 
 		span {
