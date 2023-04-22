@@ -1,4 +1,4 @@
-<section class="letters">
+<section class="letters" id="letters">
 	<div class="container">
 		<div class="letters__head">
 			<h2 class="title--big letters__title">Dopisová doporučení</h2>
@@ -17,7 +17,11 @@
 		</div>
 		<div class="slider letters__list">
 			<?php foreach(getLetters() as $letter) { ?>
-				<div><img src="<?php echo $letter['img']; ?>" alt="<?php echo $letter['name']; ?>" width="400" loading="lazy"></div>
+				<div>
+					<a class="letters__item" href="<?php echo $letter['img']; ?>">
+						<img src="<?php echo $letter['img']; ?>" alt="<?php echo $letter['name']; ?>" loading="lazy">
+					</a>
+				</div>
 			<?php } ?>
 		</div>
 	</div>

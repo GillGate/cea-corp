@@ -4,36 +4,36 @@
 				<div class="footer__navItem">
 					<h3 class="footer__title">Agentura</h3>
 					<ul class="footer__navList">
-						<li><a href="#">Informace o spolecnosti</a></li>
-						<li><a href="#">Dokumenty ke stazeni</a></li>
-						<li><a href="#">Kontakty</a></li>
+						<li><a href="/about/">Informace o spolecnosti</a></li>
+						<li><a href="/documents/">Dokumenty ke stazeni</a></li>
+						<li><a href="/contacts/">Kontakty</a></li>
 					</ul>
 				</div>
 				<div class="footer__navItem">
 					<h3 class="footer__title">Zaměstnanci</h3>
 					<ul class="footer__navList">
-						<li><a href="#">Volne pozice </a></li>
-						<li><a href="#">Hledam prace</a></li>
+						<li><a href="/employees/">Volne pozice </a></li>
+						<li><a href="/employees/#form">Hledam prace</a></li>
 					</ul>
 				</div>
 				<div class="footer__navItem">
 					<h3 class="footer__title">Zaměstnavatele</h3>
 					<ul class="footer__navList">
-						<li><a href="#">Nasi partnery</a></li>
-						<li><a href="#">Recenze partneru</a></li>
-						<li><a href="#">Dopisova doruceni</a></li>
-						<li><a href="#">Navazat partnerstvi</a></li>
+						<li><a href="/partners/">Nasi partnery</a></li>
+						<li><a href="/partners/#reviews">Recenze partneru</a></li>
+						<li><a href="/partners/#letters">Dopisova doruceni</a></li>
+						<li><a href="/partners/#cooperation">Navazat partnerstvi</a></li>
 					</ul>
 				</div>
 				<div class="footer__navItem">
 					<ul class="footer__navList">
-						<li><a href="#">Mapa stránek</a></li>
-						<li><a href="#">Ochrana osobních údajů</a></li>
-						<li><a href="#">Pravidla používání</a></li>
+						<!-- <li><a href="#">Mapa stránek</a></li> -->
+						<li><a href="/policy/">Ochrana osobních údajů</a></li>
+						<li><a href="/terms-of-use/">Pravidla používání</a></li>
 					</ul>
 					<div class="footer__navDirect">
 						Navštivte také náš druhý web:
-						<a href="#">Legalní práce v ČR</a>
+						<a href="https://cea.cz" target="_blank" rel="noopener">Legalní práce v ČR</a>
 					</div>
 				</div>
 			</div>
@@ -68,15 +68,42 @@
 						Socialni site
 					</h3>
 					<div class="footer__socialList">
-						<a href="#"><img src="<?php echo IMG_DIR ?>/social-fb.svg" alt="Facebook"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/social-vk.svg" alt="VK"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/social-ig.svg" alt="Instagram"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/social-wa.svg" alt="WhatsApp"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/social-tg.svg" alt="Telegram"></a>
+						<a href="https://www.facebook.com/pages/category/Product-Service/%C4%8Cesko-Evropsk%C3%A1-agentura-815175385535172/" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/social-fb.svg" alt="Facebook">
+						</a>
+						<a href="https://vk.com/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/social-vk.svg" alt="VK">
+						</a>
+						<a href="https://www.instagram.com/cea.brigady/" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/social-ig.svg" alt="Instagram">
+						</a>
+						<a href="https://wa.me/420775265842" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/social-wa.svg" alt="WhatsApp">
+						</a>
+						<a href="https://telegram.me/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/social-tg.svg" alt="Telegram">
+						</a>
 					</div>
-					<p class="footer__text">© Copyright 2021. Všechna práva vyhrazena</p>
+					<div class="footer__socialList footer__socialList--mobile">
+						<a href="https://wa.me/420775265842" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-wa.svg" alt="WhatsApp">
+						</a>
+						<a href="https://telegram.me/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-tg.svg" alt="Telegram">
+						</a>
+						<a href="viber://chat?number=%2B420775265842" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-vb.svg" alt="Viber">
+						</a>
+						<a href="https://vk.com/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-vk.svg" alt="VK">
+						</a>
+						<a href="https://www.facebook.com/pages/category/Product-Service/%C4%8Cesko-Evropsk%C3%A1-agentura-815175385535172/" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-fb.svg" alt="Facebook">
+						</a>
+					</div>
 				</div>
 			</div>
+			<p class="footer__text">© Copyright 2021. Všechna práva vyhrazena</p>
 		</div>
 	</footer>
 	<?php wp_footer(); ?>

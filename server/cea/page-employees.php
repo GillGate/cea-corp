@@ -2,19 +2,33 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<div class="header__logo">
-				<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
-			</div>
-			<nav class="header__nav">
-				<a href="/" class="header__link">Domů</a>
-				<a href="/about" class="header__link">O nás</a>
-				<a class="header__link header__link--active">Zaměstnanci</a>
-				<a href="/partners" class="header__link">Zaměstnavatele</a>
-				<a href="/contacts" class="header__link">Kontakty</a>
-			</nav>
-			<div class="header__phone">
-				<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
-				<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+			<div class="header__head">
+				<div class="header__logo">
+					<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
+				</div>
+				<div class="header__navBlock">
+					<div class="header__bar"><span></span></div>
+					<div class="header__openHeader">
+						<div class="header__openPhone">
+							<a href="tel:+420775265842">+420 775 265 842</a>
+							<span>Viber, WhatsApp, Telegram</span>
+						</div>
+						<button class="header__close" type="button">
+							<img src="<?php echo IMG_DIR ?>/close.svg" alt="" width="40" height="40">
+						</button>
+					</div>
+					<nav class="header__nav">
+						<a href="/" class="header__link">Domů</a>
+						<a href="/about/" class="header__link">O nás</a>
+						<a class="header__link header__link--active">Zaměstnanci</a>
+						<a href="/partners/" class="header__link">Zaměstnavatele</a>
+						<a href="/contacts/" class="header__link">Kontakty</a>
+					</nav>
+				</div>
+				<div class="header__phone">
+					<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
+					<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -117,29 +131,29 @@
 			<?php get_template_part( 'include/partners' ); ?>
 		</div>
 	</section>
-	<section class="careerChange">
+	<section class="careerChange" id="form">
 		<div class="container">
 			<div class="careerChange__wrapper">
 				<h2 class="title title--medium careerChangel__title">Zvažujete změnu zaměstnání?</h2>
 				<div class="careerChange__formWrapper">
 					<p class="text careerChange__text">Pošlete nám CV! Zaslaný životopis si pečlivě projdeme a do 2 až 3 dnů se ozveme. Společně pak probereme vaše představy o novém zaměstnaní, dosavadní zkušenosti a možnosti uplatnění.</p>
-					<form class="form form--white careerChange__form">
+					<form class="form form--white careerChange__form" data-src="<?php echo THEME_ROOT ?>">
 						<div class="form__body">
-							<label class="form__label">
-								<input type="text" class="form__input" name="name" placeholder="Jméno a příjmení*">
+							<label class="form__label" data-error>
+								<input type="text" class="form__input" name="career-name" placeholder="Jméno a příjmení*">
 							</label>
-							<label class="form__label">
-								<input type="email" class="form__input" name="email" placeholder="E-mail*">
+							<label class="form__label" data-error>
+								<input type="email" class="form__input" name="career-email" placeholder="E-mail*">
 							</label>
-							<label class="form__label">
-								<input type="phone" class="form__input" name="phone" placeholder="Telefon*">
+							<label class="form__label" data-error>
+								<input type="phone" class="form__input" name="career-phone" placeholder="Telefon*">
 							</label>
-							<label class="form__label">
-								<input type="phone" class="form__input" name="field" placeholder="V jakém oboru hledáte práci?">
+							<label class="form__label" data-error>
+								<input type="tel" class="form__input" name="career-field" placeholder="V jakém oboru hledáte práci?">
 							</label>
-							<label class="form__label form__label--file">
+							<label class="form__label form__label--file" data-error>
 								<h3 class="form__title">Životopis*</h3>
-								<input type="file" class="form__input form__input--file" name="file">
+								<input type="file" class="form__input form__input--file" name="career-file">
 							</label>
 						</div>
 						<div class="form__foot">
@@ -149,10 +163,11 @@
 									Souhlasím se <a href="#">zpracováním osobních údajů</a><span>*</span>
 								</label>
 							</div>
-							<button class="link--arrow form__btn">Odeslat žádost</button>
+							<button type="button" class="link--arrow form__btn careerChange__btn">Odeslat žádost</button>
 						</div>
 					</form>
 				</div>
+				<div class="form__result"></div>
 			</div>
 		</div>
 	</section>

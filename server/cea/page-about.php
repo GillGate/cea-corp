@@ -2,19 +2,33 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<div class="header__logo">
-				<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
-			</div>
-			<nav class="header__nav">
-				<a href="/" class="header__link">Domů</a>
-				<a class="header__link header__link--active">O nás</a>
-				<a href="/employees" class="header__link">Zaměstnanci</a>
-				<a href="/partners" class="header__link">Zaměstnavatele</a>
-				<a href="/contacts" class="header__link">Kontakty</a>
-			</nav>
-			<div class="header__phone">
-				<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
-				<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+			<div class="header__head">
+				<div class="header__logo">
+					<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
+				</div>
+				<div class="header__navBlock">
+					<div class="header__bar"><span></span></div>
+					<div class="header__openHeader">
+						<div class="header__openPhone">
+							<a href="tel:+420775265842">+420 775 265 842</a>
+							<span>Viber, WhatsApp, Telegram</span>
+						</div>
+						<button class="header__close" type="button">
+							<img src="<?php echo IMG_DIR ?>/close.svg" alt="" width="40" height="40">
+						</button>
+					</div>
+					<nav class="header__nav">
+						<a href="/" class="header__link">Domů</a>
+						<a class="header__link header__link--active">O nás</a>
+						<a href="/employees/" class="header__link">Zaměstnanci</a>
+						<a href="/partners/" class="header__link">Zaměstnavatele</a>
+						<a href="/contacts/" class="header__link">Kontakty</a>
+					</nav>
+				</div>
+				<div class="header__phone">
+					<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
+					<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -25,7 +39,7 @@
 					Úspěch firmy stojí <br>
 					především na lidech
 				</h1>
-				<ul class="about__list">
+				<ul class="about__list about__list--desktop">
 					<li>
 						<span>60</span> partnerů <br> v ČR
 					</li>
@@ -54,6 +68,17 @@
 					<p class="text about__text">Má splněny veškeré další legislativní požadavky, tj. především složení kauce a firemní pojištění. Splňuje požadavky nařízení Evropské unie General Data Protection Regulation na ochranu osobních údajů.</p>
 				</div>
 			</div>
+			<ul class="about__list about__list--tablet">
+				<li>
+					<span>60</span> partnerů <br> v ČR
+				</li>
+				<li>
+					<span>5K</span> spokojených <br> zaměstnanců
+				</li>
+				<li>
+					<span>5</span> let <br> na trhu
+				</li>
+			</ul>
 		</div>
 	</section>
 	<section class="institution">
@@ -112,7 +137,7 @@
 			</div>
 			<div class="slider gallery__list">
 				<?php foreach(getGallery() as $photo) { ?>
-					<div><img src="<?php echo $photo['img']; ?>" alt="<?php echo $photo['name']; ?>" loading="lazy"></div>
+					<div><img src="<?php echo $photo['img']; ?>" alt="<?php echo $photo['name']; ?>"></div>
 				<?php } ?>
 			</div>
 			<p class="text text--bl gallery__quote">
@@ -123,13 +148,16 @@
 	<section class="docs">
 		<div class="container">
 			<div class="docs__wrapper">
-				<div class="docs__img">
+				<div class="docs__img docs__img--desktop">
 					<img src="<?php echo IMG_DIR ?>/docs.jpg" alt="">
 				</div>
 				<div class="docs__info">
 					<h2 class="title title--big docs__title">Dokumenty <br> ke stážení</h2>
 					<p class="docs__text">Všechny formuláře a další důležité dokumenty, které budete potřebovat.</p>
-					<a href="/documents/" class="link--arrow link--arrowFW docs__link">Dokumenty</a>
+					<div class="docs__img docs__img--tablet">
+						<img src="<?php echo IMG_DIR ?>/docs.jpg" alt="">
+					</div>
+					<a href="#" class="link--arrow link--arrowFW docs__link">Dokumenty</a>
 				</div>
 			</div>
 		</div>
@@ -139,16 +167,16 @@
 			<div class="orderCall__wrapper">
 				<h2 class="title title--medium orderCall__title">Máte nějaké otázky? <br> Rádi vám odpovíme</h2>
 				<div class="orderCall__formWrapper">
-					<form class="form form--white orderCall__form">
+					<form class="form form--white orderCall__form" data-src="<?php echo THEME_ROOT ?>">
 						<div class="form__body">
-							<label class="form__label">
-								<input type="text" class="form__input" name="name" placeholder="Jméno a příjmení*">
+							<label class="form__label" data-error>
+								<input type="text" class="form__input" name="oc-name" placeholder="Jméno a příjmení*">
 							</label>
-							<label class="form__label">
-								<input type="email" class="form__input" name="email" placeholder="E-mail*">
+							<label class="form__label" data-error>
+								<input type="email" class="form__input" name="oc-email" placeholder="E-mail*">
 							</label>
-							<label class="form__label">
-								<input type="text" class="form__input" name="message" placeholder="Zpráva*">
+							<label class="form__label" data-error>
+								<input type="text" class="form__input" name="oc-message" placeholder="Zpráva*">
 							</label>
 						</div>
 						<div class="form__foot">
@@ -158,9 +186,10 @@
 									Souhlasím se <a href="#">zpracováním osobních údajů</a><span>*</span>
 								</label>
 							</div>
-							<button class="link--arrow form__btn">Odeslat žádost</button>
+							<button class="link--arrow form__btn orderCall__btn">Odeslat žádost</button>
 						</div>
 					</form>
+					<div class="form__result"></div>
 				</div>
 			</div>
 		</div>

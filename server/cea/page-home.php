@@ -2,19 +2,33 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<div class="header__logo">
-				<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
-			</div>
-			<nav class="header__nav">
-				<a class="header__link header__link--active">Domů</a>
-				<a href="/about" class="header__link">O nás</a>
-				<a href="/employees" class="header__link">Zaměstnanci</a>
-				<a href="/partners" class="header__link">Zaměstnavatele</a>
-				<a href="/contacts" class="header__link">Kontakty</a>
-			</nav>
-			<div class="header__phone">
-				<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
-				<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+			<div class="header__head">
+				<div class="header__logo">
+					<img src="<?php echo IMG_DIR ?>/logo.svg" height="60" alt="">
+				</div>
+				<div class="header__navBlock">
+					<div class="header__bar"><span></span></div>
+					<div class="header__openHeader">
+						<div class="header__openPhone">
+							<a href="tel:+420775265842">+420 775 265 842</a>
+							<span>Viber, WhatsApp, Telegram</span>
+						</div>
+						<button class="header__close" type="button">
+							<img src="<?php echo IMG_DIR ?>/close.svg" alt="" width="40" height="40">
+						</button>
+					</div>
+					<nav class="header__nav">
+						<a class="header__link header__link--active">Domů</a>
+						<a href="/about/" class="header__link">O nás</a>
+						<a href="/employees/" class="header__link">Zaměstnanci</a>
+						<a href="/partners/" class="header__link">Zaměstnavatele</a>
+						<a href="/contacts/" class="header__link">Kontakty</a>
+					</nav>
+				</div>
+				<div class="header__phone">
+					<a href="tel:+420775265842" class="header__link header__link--phone">+420 775 265 842</a>
+					<a href="tel:+420222103129" class="header__link header__link--fax">+420 222 103 129 </a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -39,10 +53,10 @@
 		<div class="container">
 			<div class="success__head">
 				<div class="success__titleWrap">
-					<h2 class="title--medium success__title">
+					<h2 class="title title--medium success__title">
 						Úspěch firmy stojí především na lidech
 					</h2>
-					<p class="caption success__headCaption">
+					<p class="caption success__headCaption success__headCaption--desktop">
 						Agentura působí na celém území České republiky i v dalších státech EU
 					</p>
 				</div>
@@ -58,10 +72,15 @@
 					<div class="success__asideImg">
 						<img src="<?php echo IMG_DIR ?>/success-aside.jpg" alt="">
 					</div>
-					<p class="caption success__asideCaption">
-						Poskytujeme profesionální servis a pečlivě se staráme o naši klienty tak, abychom zajistili jejich maximální spokojenost  
-					</p>
-					<a href="#" class="link--arrow link--arrowFW success__link">O společnosti</a>
+					<div class="success__asideContent">
+						<p class="caption success__asideCaption success__asideCaption--tablet">
+						Agentura působí na celém území České republiky i v dalších státech EU
+						</p>
+						<p class="caption success__asideCaption">
+							Poskytujeme profesionální servis a pečlivě se staráme o naši klienty tak, abychom zajistili jejich maximální spokojenost  
+						</p>
+						<a href="/about/" class="link--arrow link--arrowFW success__link">O společnosti</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -115,34 +134,35 @@
 			<h2 class="title--medium cooperation__title">Máte zájem o spolupráci? Dejte nám vědět</h2>
 			<div class="cooperation__formWrapper">
 				<h3 class="title--medium cooperation__formTitle">Možnosti spolupráce. Staňte se naším partnerem!</h3>
-				<form class="form cooperation__form">
+				<form class="form cooperation__form" data-src="<?php echo THEME_ROOT ?>">
 					<div class="form__body">
-						<label class="form__label">
-							<input type="text" class="form__input" name="name" placeholder="Jméno a příjmení*">
+						<label class="form__label" data-error="">
+							<input type="text" class="form__input" name="cooperation-name" placeholder="Jméno a příjmení*">
+						</label>
+						<label class="form__label" data-error="">
+							<input type="text" class="form__input" name="cooperation-company" placeholder="Firma*">
+						</label>
+						<label class="form__label" data-error="">
+							<input type="email" class="form__input" name="cooperation-email" placeholder="E-mail*">
+						</label>
+						<label class="form__label" data-error="">
+							<input type="tel" class="form__input" name="cooperation-phone" placeholder="Telefon*">
 						</label>
 						<label class="form__label">
-							<input type="text" class="form__input" name="company" placeholder="Firma*">
-						</label>
-						<label class="form__label">
-							<input type="email" class="form__input" name="email" placeholder="E-mail*">
-						</label>
-						<label class="form__label">
-							<input type="phone" class="form__input" name="phone" placeholder="Telefon*">
-						</label>
-						<label class="form__label">
-							<input type="text" class="form__input" name="comment" placeholder="Komentář">
+							<input type="text" class="form__input" name="cooperation-comment" placeholder="Komentář">
 						</label>
 					</div>
 					<div class="form__foot">
 						<div class="form__agree">
-							<input type="checkbox" name="agree" id="form_agree" class="vh">
+							<input type="checkbox" name="agree" id="form_agree" class="vh form__checkbox">
 							<label for="form_agree" class="form__agreeLabel">
 								Souhlasím se <a href="#">zpracováním osobních údajů</a><span>*</span>
 							</label>
 						</div>
-						<button class="link--arrow link--arrowWhite form__btn">Odeslat žádost</button>
+						<button type="button" class="link--arrow link--arrowWhite form__btn coopetation__btn">Odeslat žádost</button>
 					</div>
 				</form>
+				<div class="form__result"></div>
 			</div>
 		</div>
 	</section>
@@ -153,7 +173,7 @@
 				<p class="consultation__caption">
 					Pojďme se spolu podívat jak vám můžeme hledání vaší vysněné práce usnadnit.
 				</p>
-				<a href="#" class="consultation__link">Zobrazit více</a>
+				<a href="/employees/" class="consultation__link">Zobrazit více</a>
 			</div>
 			<div class="consultation__aside">
 				<div class="consultation__asideHead">
@@ -188,11 +208,21 @@
 					<p>telefon: <a href="tel:+420775265842">+420 775 265 842</a></p>
 					<p>e-mail: <a href="mailto:info@cea.cz">info@cea.cz</a></p>
 					<div class="contacts__list">
-						<a href="#"><img src="<?php echo IMG_DIR ?>/contacts-wa.svg" alt="WhatsApp"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/contacts-tg.svg" alt="Telegram"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/contacts-vb.svg" alt="Viber"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/contacts-vk.svg" alt="VK"></a>
-						<a href="#"><img src="<?php echo IMG_DIR ?>/contacts-fb.svg" alt="Facebook"></a>
+						<a href="https://wa.me/420775265842" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-wa.svg" alt="WhatsApp">
+						</a>
+						<a href="https://telegram.me/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-tg.svg" alt="Telegram">
+						</a>
+						<a href="viber://chat?number=%2B420775265842" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-vb.svg" alt="Viber">
+						</a>
+						<a href="https://vk.com/cea_agentura" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-vk.svg" alt="VK">
+						</a>
+						<a href="https://www.facebook.com/pages/category/Product-Service/%C4%8Cesko-Evropsk%C3%A1-agentura-815175385535172/" target="_blank" rel="noopener">
+							<img src="<?php echo IMG_DIR ?>/contacts-fb.svg" alt="Facebook">
+						</a>
 					</div>
 				</div>
 			</div>
